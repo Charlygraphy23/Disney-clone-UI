@@ -9,7 +9,7 @@ const Movies = () => {
 	const dispatch = useDispatch();
 	const history = useHistory();
 
-	const { error, loading, movies } = useSelector(
+	const { loading, movies } = useSelector(
 		(state: StoreType) => state.MovieReducer
 	);
 

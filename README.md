@@ -44,6 +44,6 @@ here is the Demo Link - [Demo App](https://hotstar-clone-22b12.web.app/)
 
 ## Preview
 
-![alt text](https://github.com/Charlygraphy23/Disney-clone-UI/blob/master/screenshots/Capture.PNG)
-![alt text](https://github.com/Charlygraphy23/Disney-clone-UI/blob/master/screenshots/Capture1.PNG)
-![alt text](https://github.com/Charlygraphy23/Disney-clone-UI/blob/master/screenshots/Capture2.PNG)
+![alt text](https://github.com/Charlygraphy23/Disney-clone-UI/blob/main/screenshots/Capture.PNG)
+![alt text](https://github.com/Charlygraphy23/Disney-clone-UI/blob/main/screenshots/Capture1.PNG)
+![alt text](https://github.com/Charlygraphy23/Disney-clone-UI/blob/main/screenshots/Capture2.PNG)

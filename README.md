@@ -38,6 +38,10 @@ See the section about [deployment](https://facebook.github.io/create-react-app/d
 - Spotify Api
 - Typescript
 
+## Demo -
+
+here is the Demo Link - [Demo App](https://hotstar-clone-22b12.web.app/)
+
 ## Preview
 
 ![alt text](https://github.com/Charlygraphy23/Disney-clone-UI/blob/master/screenshots/Capture.PNG)

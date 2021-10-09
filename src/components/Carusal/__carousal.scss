@@ -1,0 +1,137 @@
+$carousalHeight: 600px;
+
+.carousal {
+	height: $carousalHeight;
+	position: relative;
+	overflow: hidden;
+	padding-top: 10px;
+
+	.wrapper {
+		position: relative;
+		width: calc(100% - #{$padding});
+		height: 90%;
+		margin: 0 auto;
+
+		.card {
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			border-radius: 5px;
+			margin-left: 101%;
+			overflow: hidden;
+			border: 4px solid transparent;
+			transition: 0.3s ease-in-out;
+			transition-property: margin-left, border;
+			box-shadow: 0px 15px 10px rgba(black, 0.4);
+			background-color: $darkTheme2;
+
+			&:hover {
+				border: 4px solid rgba(249, 249, 249, 0.8);
+			}
+
+			img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			&.active {
+				margin-left: 0%;
+			}
+
+			&.right {
+				margin-left: 101%;
+			}
+
+			&.left {
+				margin-left: -101%;
+			}
+		}
+	}
+
+	.pointer {
+		@include flexBox(row, center, center);
+
+		.navigation {
+			width: 8px;
+			height: 8px;
+			background-color: $textColor;
+			border-radius: 50%;
+			margin-top: 20px;
+			margin-right: 10px;
+
+			&.active {
+				background-color: white;
+			}
+		}
+	}
+
+	&:hover .carousal_shade {
+		opacity: 0.6;
+		pointer-events: all;
+	}
+
+	.carousal_shade {
+		position: absolute;
+		top: 0;
+		height: 100%;
+		width: 50px;
+		opacity: 0.6;
+		z-index: 10;
+		opacity: 0;
+		pointer-events: none;
+		@include flexBox(row, center, center);
+		transition: 0.2s ease-in-out;
+		transition-property: opacity;
+
+		i {
+			font-size: 2rem;
+			color: white;
+		}
+
+		&.right {
+			right: 0;
+			left: auto;
+			background: linear-gradient(
+				270deg,
+				rgba(0, 0, 0, 1) 0%,
+				rgba(251, 251, 251, 0) 100%
+			);
+		}
+
+		&.left {
+			left: 0;
+			right: auto;
+			background: linear-gradient(
+				90deg,
+				rgba(0, 0, 0, 1) 0%,
+				rgba(251, 251, 251, 0) 100%
+			);
+		}
+	}
+}
+
+@media screen and (max-width: 1500px) {
+	$carousalHeight: 450px;
+
+	.carousal {
+		height: $carousalHeight;
+	}
+}
+
+@media screen and (max-width: 1080px) {
+	$carousalHeight: 350px;
+
+	.carousal {
+		height: $carousalHeight;
+	}
+}
+@media screen and (max-width: 786px) {
+	$carousalHeight: 280px;
+
+	.carousal {
+		height: $carousalHeight;
+	}
+}

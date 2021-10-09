@@ -1,26 +1,25 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useEffect } from "react";
+import "styles/style.css";
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css";
+import { useDispatch } from "react-redux";
+import { checkAuth } from "store/actions/auth.action";
+
+// routes
+import IndexRoutes from "routes/index.routes";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+	const dispatch = useDispatch();
+
+	useEffect(() => {
+		dispatch(checkAuth());
+		return () => {};
+	}, [dispatch]);
+
+	return (
+		<>
+			<IndexRoutes />
+		</>
+	);
 }
 
 export default App;

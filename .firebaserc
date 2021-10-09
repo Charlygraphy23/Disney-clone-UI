@@ -1,0 +1,14 @@
+{
+	"projects": {
+		"default": "hotstar-clone-72135"
+	},
+	"targets": {
+		"hotstar-clone-72135": {
+			"hosting": {
+				"admin": [
+					"hotstar-clone-72135"
+				]
+			}
+		}
+	}
+}
